@@ -24,7 +24,7 @@ export class ChaosService {
     });
     return Object.entries(allVulnerabilitiesMap).map(([ip, data]) => ({
       ip,
-      vulnerabilities: data['vulnerabilities'],
+      vulnerabilities: (data as any).vulnerabilities,
     }));
   }
 
